@@ -6,6 +6,7 @@ import Banner from "./Banner";
 import Card from "./Card";
 
 import type { Technology } from "./Type";
+import Footer from "./Footer";
 
 const technologyFetch = async (): Promise<Technology[]> => {
   const res = await fetch("/public/technologies.json");
@@ -26,8 +27,6 @@ function App() {
     <>
       <Toaster position="top-right" />
 
-      <Nav />
-      <Banner />
 
       <Suspense
         fallback={
@@ -36,7 +35,11 @@ function App() {
           </div>
         }
       >
+        
+      <Nav />
+      <Banner />
         <Card technologyPromise={technologyPromise} />
+        <Footer/>
       </Suspense>
     </>
   );
