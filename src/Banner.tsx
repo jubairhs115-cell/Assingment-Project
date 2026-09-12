@@ -27,7 +27,7 @@ const Banner = () => {
             Explore Technologies
           </button>
 
-          <button className="h-10.5 w-42.5 border border-gray-500 Ig-px-8 font-normal rounded-[8px]">
+          <button className="h-10.5 w-42.5 border border-gray-300 Ig-px-8 font-normal rounded-[8px]">
             Learn More
           </button>
 

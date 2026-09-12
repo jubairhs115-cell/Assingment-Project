@@ -48,7 +48,7 @@ const Stack = ({ selected, onRemove, onClear }: Props) => {
 
               <button
                 onClick={() => onRemove(item.name)}
-                className="px-2 text-sm text-slate-400 hover:text-red-500"
+                className="px-2 text-2xl text-slate-400 hover:text-red-500 "
               >
                 ×
               </button>
