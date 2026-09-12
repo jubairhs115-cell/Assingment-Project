@@ -19,7 +19,6 @@ const CardTwo = ({ tech, selected, onAdd }: Props) => {
             key={item.name}
             className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
           >
-            {/* Icon + Badge */}
             <div className="flex items-center justify-between">
               <div className="flex h-8 w-8 items-center justify-center">
                 <img
@@ -62,17 +61,14 @@ const CardTwo = ({ tech, selected, onAdd }: Props) => {
               </span>
             </div>
 
-            {/* Technology Name */}
             <h3 className="mt-4 text-sm font-bold text-slate-800">
               {item.name}
             </h3>
 
-            {/* Description */}
             <p className="mt-2 min-h-[52px] text-[10px] leading-4 text-slate-400">
               {item.description}
             </p>
 
-            {/* Category + Difficulty + Rating */}
             <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3">
               <span className="rounded bg-slate-100 px-2 py-1 text-[8px] text-slate-500">
                 {item.category}
@@ -88,7 +84,6 @@ const CardTwo = ({ tech, selected, onAdd }: Props) => {
               </span>
             </div>
 
-            {/* Add Button */}
             <button
               onClick={() => onAdd(item)}
               disabled={isSelected}

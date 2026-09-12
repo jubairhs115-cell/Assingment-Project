@@ -1,4 +1,5 @@
-import { Suspense } from "react";
+ import { Suspense } from "react";
+import { Toaster } from "react-hot-toast";
 
 import Nav from "./Nav";
 import Banner from "./Banner";
@@ -23,16 +24,18 @@ const technologyPromise = technologyFetch();
 function App() {
   return (
     <>
-    
+      <Toaster position="top-right" />
 
-      <Suspense  fallback={
-    <div className="flex min-h-screen items-center justify-center">
-      <p className="text-pink-400">Loading...</p>
-    </div>
-  }>
-        <Nav />
-
+      <Nav />
       <Banner />
+
+      <Suspense
+        fallback={
+          <div className="flex min-h-screen items-center justify-center">
+            <p className="text-pink-400">Loading...</p>
+          </div>
+        }
+      >
         <Card technologyPromise={technologyPromise} />
       </Suspense>
     </>

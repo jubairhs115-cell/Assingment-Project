@@ -9,7 +9,6 @@ interface Props {
 const Stack = ({ selected, onRemove, onClear }: Props) => {
   return (
     <div className="h-fit rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-      
       <h2 className="text-sm font-bold text-slate-800">
         Your Stack
       </h2>
@@ -29,7 +28,6 @@ const Stack = ({ selected, onRemove, onClear }: Props) => {
               key={item.name}
               className="flex items-center justify-between rounded-lg border border-slate-200 p-2"
             >
-              
               <div className="flex items-center gap-2">
                 <img
                   src={item.icon}
@@ -54,7 +52,6 @@ const Stack = ({ selected, onRemove, onClear }: Props) => {
               >
                 ×
               </button>
-
             </div>
           ))
         )}
@@ -68,7 +65,6 @@ const Stack = ({ selected, onRemove, onClear }: Props) => {
           Remove All
         </button>
       )}
-
     </div>
   );
 };
