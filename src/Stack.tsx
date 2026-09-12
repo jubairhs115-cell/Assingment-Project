@@ -60,7 +60,7 @@ const Stack = ({ selected, onRemove, onClear }: Props) => {
       {selected.length > 0 && (
         <button
           onClick={onClear}
-          className="mt-5 w-full rounded-md border border-red-200 py-2 text-[9px] font-medium text-red-500 hover:bg-red-50"
+          className="mt-5 w-full rounded-md border border-red-200 py-2  text-red-500 hover:bg-red-50 text-[14px] font-semibold"
         >
           Remove All
         </button>
