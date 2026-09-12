@@ -9,7 +9,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="mx-auto mt-6 max-w-7xl px-4 sm:px-6 lg:px-8">
+    <header className=" sticky top-0 z-50 mx-auto mt-6 max-w-7xl px-4 sm:px-6 lg:px-8">
 
      
       <div className="flex items-center justify-between">
