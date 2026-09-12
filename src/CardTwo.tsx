@@ -70,16 +70,16 @@ const CardTwo = ({ tech, selected, onAdd }: Props) => {
             </p>
 
             <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3">
-              <span className="rounded bg-slate-100 px-2 py-1 text-[8px] text-slate-500">
+              <span className="rounded bg-slate-100 px-2 py-1 text-[11px] text-slate-500 font-medium">
                 {item.category}
               </span>
 
-              <span className="text-[8px] text-slate-400">
+              <span className="text-[11px] text-slate-400 font-medium">
                 {item.difficulty}
               </span>
 
-              <span className="text-[9px] text-slate-500">
-                <span className="text-amber-400">★</span>{" "}
+              <span className="text-[11px] text-slate-500 font-semibold">
+                <span className="text-amber-400 h-2.25 w-[9.28px]">★</span>{" "}
                 {item.rating}
               </span>
             </div>
