@@ -1,22 +1,36 @@
-import { Suspense } from "react"
-import Banner from "./Banner"
-import Nav from "./Nav"
+import Nav from "./Nav";
+import Banner from "./Banner";
+import type { Technology } from "./Type";
+import { Suspense } from "react";
+import Card from "./Card";
 
- 
+const technologyFetch = async (): Promise<Technology[]> => {
+  const res = await fetch("/public/technologies.json");
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch technologies.json");
+  }
+
+  const data = await res.json();
+
+  return data;
+};
+
+const technologyPromise = technologyFetch();
 
 function App() {
-  
   return (
     <>
+      
 
-    <Suspense fallback={<p>Loading...</p>}>
- <Nav/>
-        <Banner/>
+      <Suspense fallback={<p>Loading....</p>}>
+      <Nav />
 
-    </Suspense>
-       
+      <Banner />
+        <Card technologyPromise={technologyPromise} />
+      </Suspense>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
