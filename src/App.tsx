@@ -4,18 +4,18 @@ import { Toaster } from "react-hot-toast";
 import Nav from "./Nav";
 import Banner from "./Banner";
 import Card from "./Card";
-
-import type { Technology } from "./Type";
 import Footer from "./Footer";
 
+import type { Technology } from "./Type";
+
 const technologyFetch = async (): Promise<Technology[]> => {
-  const res = await fetch("/public/technologies.json");
+  const res = await fetch("/data.json");
 
   if (!res.ok) {
     throw new Error("Failed to fetch technologies");
   }
 
-  const data = await res.json();
+  const data: Technology[] = await res.json();
 
   return data;
 };
@@ -27,6 +27,8 @@ function App() {
     <>
       <Toaster position="top-right" />
 
+      <Nav />
+      <Banner />
 
       <Suspense
         fallback={
@@ -35,12 +37,10 @@ function App() {
           </div>
         }
       >
-        
-      <Nav />
-      <Banner />
         <Card technologyPromise={technologyPromise} />
-        <Footer/>
       </Suspense>
+
+      <Footer />
     </>
   );
 }
