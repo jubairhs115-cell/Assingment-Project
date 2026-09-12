@@ -1,4 +1,4 @@
-1) Dev Stack 
+1) Dev Stack (Assingment-Project)
 (
 which actually responsive , we can add to cart of different language and store it into stack , and also can remove it from the stack , it's just a cart system . 
 )
